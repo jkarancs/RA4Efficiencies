@@ -39,6 +39,9 @@ if ( $#argv == 0 ) then
     echo "Error: No directory Specified"
     cat Usage.txt
     rm Usage.txt; unalias se-ls; unalias se-cp; exit
+else if ( $1 == "--help" ) then
+    cat Usage.txt
+    rm Usage.txt; unalias se-ls; unalias se-cp; exit
 endif
 
 foreach i ( `seq 1 $#argv` )
