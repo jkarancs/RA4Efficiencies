@@ -193,20 +193,20 @@ process.load('RecoMET.METAnalyzers.CSCHaloFilter_cfi')
 process.load('RecoMET.METFilters.EcalDeadCellTriggerPrimitiveFilter_cfi')
 process.load('RecoMET.METFilters.trackingFailureFilter_cfi')
 process.filterSequence = cms.Sequence(
-              process.hltFilter *
-              #process.scrapingVeto *
-              process.primaryVertexFilter*
-              #process.HBHENoiseFilter*
-              process.goodVertices*
-              #process.trackingFailureFilter*
-              #process.hcalLaserEventFilter*
-              #process.hcallasereventfilter2012*
-              #process.ecalLaserCorrFilter*
-              #process.trkPOGFilters*
-              #process.CSCTightHaloFilter*
-              #process.eeBadScFilter*
-              #process.EcalDeadCellTriggerPrimitiveFilter
-          )
+    process.hltFilter *
+    process.scrapingVeto *
+    process.primaryVertexFilter*
+    process.HBHENoiseFilter*
+    process.goodVertices*
+    process.trackingFailureFilter*
+    process.hcalLaserEventFilter*
+    #process.hcallasereventfilter2012*
+    #process.ecalLaserCorrFilter*
+    #process.trkPOGFilters*
+    process.CSCTightHaloFilter*
+    process.eeBadScFilter*
+    process.EcalDeadCellTriggerPrimitiveFilter
+)
 
 #-- MET Corrections ----------------------------------------------------------
 process.load("JetMETCorrections.Type1MET.pfMETCorrections_cff")
